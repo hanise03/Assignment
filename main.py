@@ -64,7 +64,7 @@ fig2 = px.scatter(
     x='Traffic_Density',
     y='Bike_Speed',
     color='Accident_Severity',
-    alpha=0.6,
+    opacity=0.6, 
     title='Bike Speed vs Traffic Density by Accident Severity',
     labels={
         'Traffic_Density': 'Traffic Density',
@@ -82,7 +82,7 @@ fig3 = px.scatter(
     x='Biker_Age',
     y='Bike_Speed',
     color='Accident_Severity',
-    alpha=0.6,
+    opacity=0.6, 
     title='Bike Speed vs Biker Age by Accident Severity',
     labels={
         'Biker_Age': 'Biker Age',
