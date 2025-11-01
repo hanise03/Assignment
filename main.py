@@ -108,7 +108,7 @@ fig1 = px.histogram(
     x='Road_condition',
     color='Accident_Severity',
     barmode='group',  # Creates grouped bars (like sns.countplot)
-    color_discrete_sequence=px.colors.sequential.Viridis, # Matches palette
+    color_discrete_sequence=px.colors.qualitative.Pastel, # Matches palette
     title='Accident Severity by Road Condition',
     labels={
         'Road_condition': 'Road Condition',
@@ -126,7 +126,7 @@ fig2 = px.histogram(
     x='Road_Type',
     color='Accident_Severity',
     barmode='group',
-    color_discrete_sequence=px.colors.sequential.Viridis,
+   color_discrete_sequence=px.colors.qualitative.Pastel,,
     title='Accident Severity by Road Type',
     labels={
         'Road_Type': 'Road Type',
@@ -147,7 +147,7 @@ fig3 = px.histogram(
     x='Time_of_Day',
     color='Accident_Severity',
     barmode='group',
-    color_discrete_sequence=px.colors.sequential.Viridis,
+    color_discrete_sequence=px.colors.qualitative.Pastel,,
     category_orders={
         'Time_of_Day': time_order  # This applies your specific order
     },
