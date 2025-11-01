@@ -34,7 +34,6 @@ df_encoded = load_data()
 st.title("Biker Accident Analysis")
 
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
-st.header("Bike Speed vs Number of Vehicles by Accident Severity")
 
 st.success("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
 
@@ -55,8 +54,6 @@ fig1 = px.scatter(
 # --- 4. STREAMLIT DISPLAY COMMAND ---
 st.plotly_chart(fig1, use_container_width=True)
 
-# --- Visualization 2: Bike Speed vs Traffic Density ---
-st.header("Bike Speed vs Traffic Density by Accident Severity")
 
 fig2 = px.scatter(
     df_encoded,
@@ -74,7 +71,6 @@ st.plotly_chart(fig2, use_container_width=True)
 
 
 # --- Visualization 3: Bike Speed vs Biker Age ---
-st.header("Bike Speed vs Biker Age by Accident Severity")
 
 fig3 = px.scatter(
     df_encoded,
