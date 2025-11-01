@@ -3,4 +3,4 @@ streamlit
 plotly.express
 numpy
 seaborn
-df_encoded
+
