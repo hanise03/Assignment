@@ -3,4 +3,4 @@ streamlit
 plotly.express
 numpy
 seaborn
-
+plotly.colors
