@@ -35,21 +35,21 @@ st.title("Biker Accident Analysis")
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
 st.header("Bike Speed vs Number of Vehicles by Accident Severity")
 
-# Use Plotly Express's scatter function. 
-# 'color' replaces 'hue'. 
-# Title and labels can be set directly.
 fig1 = px.scatter(
     df_encoded,
     x='Number_of_Vehicles',
     y='Bike_Speed',
-    color='Accident_Severity',  # Replaces seaborn's 'hue'
-    alpha=0.6,
+    color='Accident_Severity',
+    opacity=0.6,  # <--- Correct argument for transparency
     title='Bike Speed vs Number of Vehicles by Accident Severity',
     labels={
         'Number_of_Vehicles': 'Number of Vehicles',
         'Bike_Speed': 'Bike Speed'
     }
 )
+
+# --- 4. STREAMLIT DISPLAY COMMAND ---
+st.plotly_chart(fig1, use_container_width=True)
 
 # --- Streamlit Command to Display the Plot ---
 # This is the key line to add
