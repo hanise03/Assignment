@@ -51,11 +51,6 @@ fig1 = px.scatter(
 # --- 4. STREAMLIT DISPLAY COMMAND ---
 st.plotly_chart(fig1, use_container_width=True)
 
-# --- Streamlit Command to Display the Plot ---
-# This is the key line to add
-st.plotly_chart(fig1, use_container_width=True)
-
-
 # --- Visualization 2: Bike Speed vs Traffic Density ---
 st.header("Bike Speed vs Traffic Density by Accident Severity")
 
