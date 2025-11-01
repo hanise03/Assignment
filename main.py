@@ -33,10 +33,11 @@ df_encoded = load_data()
 
 st.title("Biker Accident Analysis")
 
-st.success("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
-
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
 st.header("Bike Speed vs Number of Vehicles by Accident Severity")
+
+st.success("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
+
 
 fig1 = px.scatter(
     df_encoded,
