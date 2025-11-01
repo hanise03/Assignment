@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import numpy as np
+import seaborn as sns
 
 st.set_page_config(
     page_title="Analysis of Factors Influencing Motorbike Accident Severity"  # Changed page title
@@ -8,10 +10,6 @@ st.set_page_config(
 
 st.header("Analysis of Factors Influencing Motorbike Accident Severity", divider="gray") # Changed header text
 
-import streamlit as st
-import plotly.express as px
-import pandas as pd
-import numpy as np
 
 # --- Dummy Data Creation ---
 # Replace this section with your actual data loading,
