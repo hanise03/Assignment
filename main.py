@@ -85,3 +85,78 @@ fig3 = px.scatter(
     }
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+import plotly.colors
+
+# --- 1. SETUP: Load Libraries and Data ---
+# Load the dataframe from the CSV you provided.
+# We'll use 'df_cleaned' as the variable name to match your code.
+try:
+    df_cleaned = pd.read_csv("student_df.csv")
+except FileNotFoundError:
+    st.error("Error: 'student_df.csv' not found. Make sure it's in the same folder as your app.py.")
+    st.stop()
+
+
+# --- 2. STREAMLIT PAGE TITLE ---
+st.title("Accident Severity Analysis")
+
+
+# --- 3. Visualization: Accident Severity by Road Condition ---
+st.header("Accident Severity by Road Condition")
+
+fig1 = px.histogram(
+    df_cleaned,
+    x='Road_condition',
+    color='Accident_Severity',
+    barmode='group',  # Creates grouped bars (like sns.countplot)
+    color_discrete_sequence=px.colors.sequential.Viridis, # Matches palette
+    title='Accident Severity by Road Condition',
+    labels={
+        'Road_condition': 'Road Condition',
+        'count': 'Count'  # px.histogram auto-generates 'count'
+    }
+)
+st.plotly_chart(fig1, use_container_width=True)
+
+
+# --- 4. Visualization: Accident Severity by Road Type ---
+st.header("Accident Severity by Road Type")
+
+fig2 = px.histogram(
+    df_cleaned,
+    x='Road_Type',
+    color='Accident_Severity',
+    barmode='group',
+    color_discrete_sequence=px.colors.sequential.Viridis,
+    title='Accident Severity by Road Type',
+    labels={
+        'Road_Type': 'Road Type',
+        'count': 'Count'
+    }
+)
+st.plotly_chart(fig2, use_container_width=True)
+
+
+# --- 5. Visualization: Accident Severity by Time of Day ---
+st.header("Accident Severity by Time of Day")
+
+# Define the specific order from your original code
+time_order = ['Morning', 'Noon', 'Afternoon', 'Evening', 'Night']
+
+fig3 = px.histogram(
+    df_cleaned,
+    x='Time_of_Day',
+    color='Accident_Severity',
+    barmode='group',
+    color_discrete_sequence=px.colors.sequential.Viridis,
+    category_orders={
+        'Time_of_Day': time_order  # This applies your specific order
+    },
+    title='Accident Severity by Time of Day',
+    labels={
+        'Time_of_Day': 'Time of Day',
+        'count': 'Count'
+    }
+)
+st.plotly_chart(fig3, use_container_width=True)
