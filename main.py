@@ -86,8 +86,6 @@ fig3 = px.scatter(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
-import plotly.colors
-
 # --- 1. SETUP: Load Libraries and Data ---
 # Load the dataframe from the CSV you provided.
 # We'll use 'df_cleaned' as the variable name to match your code.
