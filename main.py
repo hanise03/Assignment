@@ -155,7 +155,7 @@ st.plotly_chart(fig3, use_container_width=True)
 # --- 2. STREAMLIT PAGE TITLE ---
 st.title("Biker Data Analysis")
 
-st.success("""The common objective for this group is to analyze how different factors (demographic, environmental, and behavioral) relate to each other, rather than focusing on the accident outcome.""")
+st.success("""to analyze how different factors (demographic, environmental, and behavioral) relate to each other, rather than focusing on the accident outcome.""")
 
 
 # --- 3. Visualization: Biker Age Distribution by Helmet Use ---
