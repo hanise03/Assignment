@@ -50,7 +50,9 @@ fig1 = px.scatter(
         'Bike_Speed': 'Bike Speed'
     }
 )
-# Use st.plotly_chart to display the figure
+
+# --- Streamlit Command to Display the Plot ---
+# This is the key line to add
 st.plotly_chart(fig1, use_container_width=True)
 
 
