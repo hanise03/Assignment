@@ -10,6 +10,7 @@ st.set_page_config(
 
 st.header("Analysis of Factors Influencing Motorbike Accident Severity", divider="gray") # Changed header text
 
+st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
 
 # --- Dummy Data Creation ---
 # Replace this section with your actual data loading,
