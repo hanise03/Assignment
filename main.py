@@ -150,3 +150,61 @@ fig3 = px.histogram(
     }
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+
+# --- 2. STREAMLIT PAGE TITLE ---
+st.title("Biker Data Analysis")
+
+
+# --- 3. Visualization: Biker Age Distribution by Helmet Use ---
+st.header("Biker Age Distribution by Helmet Use")
+
+fig1 = px.box(
+    df_cleaned,
+    x='Wearing_Helmet',
+    y='Biker_Age',
+    color='Wearing_Helmet', # Assign color to match x-axis
+    title='Biker Age Distribution by Helmet Use',
+    labels={
+        'Wearing_Helmet': 'Wearing Helmet',
+        'Biker_Age': 'Biker Age'
+    }
+)
+st.plotly_chart(fig1, use_container_width=True)
+
+
+# --- 4. Visualization: Road Type Distribution by Weather Condition ---
+st.header("Road Type Distribution by Weather Condition")
+
+fig2 = px.histogram(
+    df_cleaned,
+    x='Weather',
+    color='Road_Type',
+    barmode='group',
+    color_discrete_sequence=px.colors.sequential.Viridis, # As in your code
+    # color_discrete_sequence=px.colors.qualitative.Pastel, # For pastel
+    title='Road Type Distribution by Weather Condition',
+    labels={
+        'Weather': 'Weather Condition',
+        'count': 'Count',
+        'Road_Type': 'Road Type'
+    }
+)
+st.plotly_chart(fig2, use_container_width=True)
+
+
+# --- 5. Visualization: Bike Speed vs Weather Condition ---
+st.header("Bike Speed vs Weather Condition")
+
+fig3 = px.box(
+    df_cleaned,
+    x='Weather',
+    y='Bike_Speed',
+    color='Weather', # Assign color to match x-axis
+    title='Bike Speed vs Weather Condition',
+    labels={
+        'Weather': 'Weather Condition',
+        'Bike_Speed': 'Bike Speed'
+    }
+)
+st.plotly_chart(fig3, use_container_width=True)
