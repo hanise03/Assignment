@@ -99,9 +99,7 @@ except FileNotFoundError:
 # --- 2. STREAMLIT PAGE TITLE ---
 st.title("Accident Severity Analysis")
 
-
-# --- 3. Visualization: Accident Severity by Road Condition ---
-st.header("Accident Severity by Road Condition")
+st.success("""to analyze how various environmental and situational factors relate to the severity of an accident.""")
 
 fig1 = px.histogram(
     df_cleaned,
@@ -118,9 +116,6 @@ fig1 = px.histogram(
 st.plotly_chart(fig1, use_container_width=True)
 
 
-# --- 4. Visualization: Accident Severity by Road Type ---
-st.header("Accident Severity by Road Type")
-
 fig2 = px.histogram(
     df_cleaned,
     x='Road_Type',
@@ -135,9 +130,6 @@ fig2 = px.histogram(
 )
 st.plotly_chart(fig2, use_container_width=True)
 
-
-# --- 5. Visualization: Accident Severity by Time of Day ---
-st.header("Accident Severity by Time of Day")
 
 # Define the specific order from your original code
 time_order = ['Morning', 'Noon', 'Afternoon', 'Evening', 'Night']
