@@ -126,7 +126,7 @@ fig2 = px.histogram(
     x='Road_Type',
     color='Accident_Severity',
     barmode='group',
-   color_discrete_sequence=px.colors.qualitative.Pastel,,
+   color_discrete_sequence=px.colors.qualitative.Pastel,
     title='Accident Severity by Road Type',
     labels={
         'Road_Type': 'Road Type',
@@ -147,7 +147,7 @@ fig3 = px.histogram(
     x='Time_of_Day',
     color='Accident_Severity',
     barmode='group',
-    color_discrete_sequence=px.colors.qualitative.Pastel,,
+    color_discrete_sequence=px.colors.qualitative.Pastel,
     category_orders={
         'Time_of_Day': time_order  # This applies your specific order
     },
