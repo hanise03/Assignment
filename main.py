@@ -78,9 +78,9 @@ with col4:
         )
 
 st.info("""1. High-Risk Age: Under 30 - This indicates that the analysis identified riders under the age of 30 as the group most likely to be involved in 'Severe' and 'Moderate' accidents, particularly when they are riding at high speeds.
-2.High-Risk Speed: Over 80 - This finding pinpoints riding faster than 80. For example, km/h  as a major threshold for danger. The charts demonstrated that the most serious accidents are predominantly grouped above this speed.
-3.High-Risk Density: Over 6.0 - This measurement defines what congested traffic means. The data reveals that when the traffic density score is above 6.0, the road environment turns into a "risk amplifier," making high-speed riding considerably more hazardous.
-4.High-Risk Vehicle Count: Over 5 - This measurement defines a "crowded road." The analysis discovered that when more than five vehicles are present nearby, the chance of a severe accident rises sharply because the motorcyclist has less time to react and less room to maneuver.""")
+           2 .High-Risk Speed: Over 80 - This finding pinpoints riding faster than 80. For example, km/h  as a major threshold for danger. The charts demonstrated that the most serious accidents are predominantly grouped above this speed.
+           3.High-Risk Density: Over 6.0 - This measurement defines what congested traffic means. The data reveals that when the traffic density score is above 6.0, the road environment turns into a "risk amplifier," making high-speed riding considerably more hazardous.
+           4.High-Risk Vehicle Count: Over 5 - This measurement defines a "crowded road." The analysis discovered that when more than five vehicles are present nearby, the chance of a severe accident rises sharply because the motorcyclist has less time to react and less room to maneuver.""")
 
 
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
