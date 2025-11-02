@@ -4,13 +4,53 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+import streamlit as st
+
+# Set page to wide layout to give the columns more space
+st.set_page_config(layout="wide")
+
+st.header("Key High-Risk Indicators for Severe Accidents")
+st.write("These metrics show the high-risk thresholds identified from the data visualizations.")
+
+# Create 4 columns
 col1, col2, col3, col4 = st.columns(4)
-   
-col1.metric(label="PLO 2", value=f"3.3", help="PLO 2: Cognitive Skill", border=True)
-col2.metric(label="PLO 3", value=f"3.5", help="PLO 3: Digital Skill", border=True)
-col3.metric(label="PLO 4", value=f"4.0", help="PLO 4: Interpersonal Skill", border=True)
-col4.metric(label="PLO 5", value=f"4.3", help="PLO 5: Communication Skill", border=True)
-st.set_page_config(
+
+# --- Column 1: Biker Age ---
+# We place a container in the column and add the border to the container
+with col1:
+    with st.container(border=True):
+        st.metric(
+            label="High-Risk Age",
+            value="< 30",
+            help="Younger riders (approx. 15-30) are disproportionately involved in severe accidents at high speeds."
+        )
+
+# --- Column 2: Bike Speed ---
+with col2:
+    with st.container(border=True):
+        st.metric(
+            label="High-Risk Speed",
+            value="> 80",
+            help="Speeds over 80 are strongly correlated with severe accidents, especially when combined with other factors."
+        )
+
+# --- Column 3: Traffic Density ---
+with col3:
+    with st.container(border=True):
+        st.metric(
+            label="High-Risk Density",
+            value="> 6.0",
+            help="High-density, congested traffic (rated > 6.0) significantly amplifies the danger of high-speed travel."
+        )
+
+# --- Column 4: Number of Vehicles ---
+with col4:
+    with st.container(border=True):
+        st.metric(
+            label="High-Risk Vehicle Count",
+            value="> 5",
+            help="Crowded roads (5+ vehicles) reduce reaction time and maneuvering space, compounding risk."
+        )
     page_title="Analysis of Factors Influencing Motorbike Accident Severity"  # Changed page title
 )
 
