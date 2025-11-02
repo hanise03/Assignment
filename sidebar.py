@@ -10,8 +10,8 @@ st.set_page_config(
 # 3. biker_data_analysis.py
 
 visualise = st.Page('main.py', title='MotorBike', icon=":material/school:")
-severity_analysis = st.Page('accident_severity.py', title='Accident Severity Analysis', icon=":material/bar_chart:")
-biker_analysis = st.Page('biker_data_analysis.py', title='Biker Data and Environmental Exposure Analysis', icon=":material/group:")
+severity_analysis = st.Page('Accident_Severity_Analysis.py', title='Accident Severity Analysis', icon=":material/bar_chart:")
+biker_analysis = st.Page('Biker_Data_and_Environmental_exposure_Analysis.py', title='Biker Data and Environmental Exposure Analysis', icon=":material/group:")
 
 home = st.Page('home.py', title='Homepage', default=True, icon=":material/home:")
 
