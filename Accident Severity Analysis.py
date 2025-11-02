@@ -4,6 +4,15 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+# --- 1. SETUP: Load Libraries and Data ---
+# Load the dataframe from the CSV you provided.
+# We'll use 'df_cleaned' as the variable name to match your code.
+try:
+    df_cleaned = pd.read_csv("student_df.csv")
+except FileNotFoundError:
+    st.error("Error: 'student_df.csv' not found. Make sure it's in the same folder as your app.py.")
+    st.stop()
+
 # --- 2. STREAMLIT PAGE TITLE ---
 st.title("Accident Severity Analysis")
 
