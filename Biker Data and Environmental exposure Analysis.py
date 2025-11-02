@@ -14,6 +14,10 @@ except FileNotFoundError:
     st.stop()
     
 # --- 2. STREAMLIT PAGE TITLE ---
+st.title("Biker Data and Environmental exposure Analysis")
+
+st.success("""Objectives: to analyze how different factors such as demographic, environmental, and behavioral relate to each other, rather than focusing on the accident outcome.""")
+
 
 # Set page to wide layout to give the columns more space
 st.set_page_config(layout="wide")
@@ -59,7 +63,6 @@ with col4:
             value="~ 79 Avg. Speed",
             help="The average Bike Speed is consistent across all weather conditions (e.g., 79.41 in Clear, 78.06 in Rainy), indicating a lack of speed mitigation."
         )
-st.success("""to analyze how different factors (demographic, environmental, and behavioral) relate to each other, rather than focusing on the accident outcome.""")
 
 
 # --- 3. Visualization: Biker Age Distribution by Helmet Use ---
