@@ -4,8 +4,6 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
-import streamlit as st
-
 # Set page to wide layout to give the columns more space
 st.set_page_config(layout="wide")
 
