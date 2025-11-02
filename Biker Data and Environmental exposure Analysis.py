@@ -94,9 +94,10 @@ fig1 = px.box(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
+st.success("""Helmet-wearing behavior is consistent across the 15–30 age range. Compliance appears to depend more on individual awareness or enforcement rather than demographic differences.""")
+
 
 # --- 4. Visualization: Road Type Distribution by Weather Condition ---
-st.header("Road Type Distribution by Weather Condition")
 
 fig2 = px.histogram(
     df_cleaned,
@@ -114,9 +115,9 @@ fig2 = px.histogram(
 )
 st.plotly_chart(fig2, use_container_width=True)
 
+st.success("""Village roads remain the most consistently used routes, regardless of weather. Their high traffic frequency increases exposure and consequently the likelihood of accidents.""")
 
 # --- 5. Visualization: Bike Speed vs Weather Condition ---
-st.header("Bike Speed vs Weather Condition")
 
 fig3 = px.box(
     df_cleaned,
@@ -130,3 +131,5 @@ fig3 = px.box(
     }
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+st.success(""": Riders generally fail to adjust speed during adverse weather conditions. This behavioral rigidity, combined with reduced visibility or road grip, significantly increases accident severity risk.""")
