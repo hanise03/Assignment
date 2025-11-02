@@ -145,3 +145,5 @@ fig3 = px.scatter(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
+st.success("""The key finding from the Bike Speed vs. Biker Age chart is that age plays a critical role in modifying the risk of high-speed riding. The visualization clearly shows a dense cluster of 'Severe' (red) and 'Moderate' (orange) accidents gathered in the top-left section. This specific area represents the hazardous mix of high bike speed and a young rider age approximately 15-30 years old. In sharp contrast, the top-right section, which shows older riders ride at similarly high speeds, displays far fewer serious incidents. This powerfully illustrates that the risk of high speed is not equal for all and is disproportionately higher for younger riders, suggesting that elements like inexperience or how they perceive risk are major factors in accident severity.""")
+
