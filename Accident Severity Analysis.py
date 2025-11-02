@@ -66,7 +66,7 @@ with col4:
 
 st.info("""
 
-* **1. Overall Severe Accidents (2,644):** This figure establishes the total size of the high-consequence issue, representing the complete number of all 'Severe Accident' instances recorded across the main road conditions (Dry and Wet).
+* **1. Overall Severe Accidents (2,644):** This figure establishes the total size of the high-consequence issue, representing the complete number of all 'Severe Accident' instances recorded across the main road conditions Dry and Wet.
 
 * **2. Most Severe Road Type (Highway):** This metric highlights the environment presenting the greatest likelihood of fatal or serious injury. Collisions on Highways are statistically the most prone to result in severe outcomes (1,139 cases), despite not recording the highest total number of incidents.
 
@@ -90,6 +90,8 @@ fig1 = px.histogram(
 )
 st.plotly_chart(fig1, use_container_width=True)
 
+st.success("""Dry roads represent the highest severity risk in terms of raw count. The perceived safety of these conditions may lead to overconfidence and consequently more serious collisions.""")
+
 
 fig2 = px.histogram(
     df_cleaned,
@@ -105,6 +107,7 @@ fig2 = px.histogram(
 )
 st.plotly_chart(fig2, use_container_width=True)
 
+st.success("""Road type determines accident consequences. Highways pose the greatest threat for severe accidents. Meanwhile village roads, despite higher frequency have the lowest severity rate.""")
 
 # Define the specific order from your original code
 time_order = ['Morning', 'Noon', 'Afternoon', 'Evening', 'Night']
@@ -125,4 +128,6 @@ fig3 = px.histogram(
     }
 )
 st.plotly_chart(fig3, use_container_width=True)
+
+st.success("""The afternoon presents the highest situational risk, as evidenced by its large share of severe accidents. Environmental and human factors such as peak traffic and does not alert to situation contribute significantly to this elevated danger.""")
 
