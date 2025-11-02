@@ -80,7 +80,6 @@ with col4:
 import streamlit as st
 
 st.info("""
-**Key High-Risk Factors Identified in Accident Analysis:**
 
 * **1. High-Risk Age: Under 30** This indicates that the analysis identified riders under the age of 30 as the group most likely to be involved in 'Severe' and 'Moderate' accidents, particularly when they are riding at high speeds.
 
