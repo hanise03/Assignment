@@ -126,6 +126,7 @@ fig2 = px.scatter(
     }
 )
 st.plotly_chart(fig2, use_container_width=True)
+st.success("""The main finding from the 'Bike Speed vs. Traffic Density' chart is that the condition of traffic flow is a key factor that increases the risk of high-speed travel. The visualization indicates that 'Severe' and 'Moderate' accidents are clustered in the top-right section, which represents the combination of high bike speed and high-density traffic. This is importantly different from number of vehicles; "High density" describes a mentally taxing, unpredictable, and often stop-and-go setting. The chart reveals that high speed in a low-density, free-flowing environment (top-left) is much less linked to severe accidents. Therefore, the primary conclusion is that the danger of high speed is heightened by the complexity and unpredictability of congested traffic, which overwhelms a riders capacity to anticipate and respond to numerous, nearby hazards.""")
 
 
 # --- Visualization 3: Bike Speed vs Biker Age ---
