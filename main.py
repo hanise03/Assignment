@@ -4,6 +4,26 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+# URL for the CSV file
+url = 'https://raw.githubusercontent.com/hanise03/Assignment/refs/heads/main/student_df.csv'
+
+# Load the data
+arts_df = load_data(url)
+
+# --- Display Data ---
+
+if not arts_df.empty:
+    st.subheader("Head of the DataFrame")
+    # Streamlit displays the data frame directly.
+    # We use .head() here to show only the first few rows,
+    # similar to the original code's intent.
+    st.dataframe(arts_df.head(), use_container_width=True)
+
+    st.success(f"Data successfully loaded. DataFrame has {arts_df.shape[0]} rows and {arts_df.shape[1]} columns.")
+else:
+    st.warning("Could not load data from the specified URL.")
+
+
 st.title("Analysis of Factors Influencing Motorbike Accident Severity") # Changed header text
 st.markdown("<hr style='border-top: 3px solid #bbb; border-radius: 3px;'>", unsafe_allow_html=True)
 
