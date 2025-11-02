@@ -6,7 +6,6 @@ import seaborn as sns
 
 st.title("Analysis of Factors Influencing Motorbike Accident Severity") # Changed header text
 st.markdown("<hr style='border-top: 3px solid #bbb; border-radius: 3px;'>", unsafe_allow_html=True)
-st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
 
 # --- Dummy Data Creation ---
 # Replace this section with your actual data loading,
@@ -26,8 +25,9 @@ def load_data():
 df_encoded = load_data()
 # --- End of Dummy Data Section ---
 
+st.title("Biker Accident Analysis")
+st.success("""to understand how bike speed, in combination with other variables like traffic, vehicle count, and biker age, relates to or influences the severity of an accident.""")
 
-st.header("Biker Accident Analysis")
 
 import streamlit as st
 
@@ -78,9 +78,6 @@ with col4:
         )
 
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
-
-st.success("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
-
 
 fig1 = px.scatter(
     df_encoded,
