@@ -132,4 +132,4 @@ fig3 = px.box(
 )
 st.plotly_chart(fig3, use_container_width=True)
 
-st.success(""": Riders generally fail to adjust speed during adverse weather conditions. This behavioral rigidity, combined with reduced visibility or road grip, significantly increases accident severity risk.""")
+st.success("""Riders generally fail to adjust speed during adverse weather conditions. This behavioral rigidity, combined with reduced visibility or road grip, significantly increases accident severity risk.""")
