@@ -5,7 +5,7 @@ import numpy as np
 import seaborn as sns
 
 st.title("Analysis of Factors Influencing Motorbike Accident Severity") # Changed header text
-st.divider()
+st.markdown("<hr style='border-top: 5px solid #bbb; border-radius: 5px;'>", unsafe_allow_html=True)
 st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
 
 # --- Dummy Data Creation ---
