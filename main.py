@@ -143,6 +143,53 @@ except FileNotFoundError:
 # --- 2. STREAMLIT PAGE TITLE ---
 st.title("Accident Severity Analysis")
 
+import streamlit as st
+
+# Set page to wide layout to give the columns more space
+st.set_page_config(layout="wide")
+
+st.header("Key High-Risk Environmental & Situational Factors")
+st.write("These metrics highlight the conditions most associated with severe accidents in the dataset.")
+
+# Create 4 columns
+col1, col2, col3, col4 = st.columns(4)
+
+# --- Column 1: Overall Severity Count ---
+with col1:
+    with st.container(border=True):
+        st.metric(
+            label="Overall Severe Accidents",
+            value="3,044",
+            help="Total count of 'Severe Accident' cases across all conditions."
+        )
+
+# --- Column 2: Road Type (Highest Severity) ---
+with col2:
+    with st.container(border=True):
+        st.metric(
+            label="Most Severe Road Type",
+            value="Highway",
+            help="Highways account for the highest raw count of Severe Accidents (1,139 cases), making it the riskiest environment for severe outcomes."
+        )
+
+# --- Column 3: Road Condition (Highest Severe Count) ---
+with col3:
+    with st.container(border=True):
+        st.metric(
+            label="Road Condition Risk",
+            value="Dry (1,974)",
+            help="Dry roads show the highest count of Severe Accidents (1,974 cases), suggesting increased speed/reduced caution may overcome better traction."
+        )
+
+# --- Column 4: Time of Day (Highest Risk Period) ---
+with col4:
+    with st.container(border=True):
+        st.metric(
+            label="Highest Risk Time",
+            value="Afternoon",
+            help="The Afternoon period accounts for the highest total accidents (2,451) and the highest Severe Accident count (1,221)."
+        )
+
 st.success("""to analyze how various environmental and situational factors relate to the severity of an accident.""")
 
 fig1 = px.histogram(
