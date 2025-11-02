@@ -16,6 +16,9 @@ except FileNotFoundError:
 # --- 2. STREAMLIT PAGE TITLE ---
 st.title("Accident Severity Analysis")
 
+st.success("""Objectives: to analyze how various environmental and situational factors that independently demonstrate the strongest association with the highest severity of motorcycle accidents.""")
+
+
 # Set page to wide layout to give the columns more space
 st.set_page_config(layout="wide")
 
@@ -61,7 +64,6 @@ with col4:
             help="The Afternoon period accounts for the highest total accidents (2,451) and the highest Severe Accident count (1,221)."
         )
 
-st.success("""to analyze how various environmental and situational factors that independently demonstrate the strongest association with the highest severity of motorcycle accidents.""")
 
 fig1 = px.histogram(
     df_cleaned,
