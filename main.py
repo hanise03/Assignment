@@ -111,6 +111,7 @@ fig1 = px.scatter(
 # --- 4. STREAMLIT DISPLAY COMMAND ---
 st.plotly_chart(fig1, use_container_width=True)
 
+st.success("""The hazard of high speed is intensified by road complexity. A large number of vehicles reduces a riders space to maneuver and their time to react, which makes high speed a leading cause of severe accidents.""")
 
 fig2 = px.scatter(
     df_encoded,
