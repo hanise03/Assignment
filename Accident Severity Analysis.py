@@ -68,11 +68,11 @@ st.info("""
 
 * **1. Overall Severe Accidents (2,644):** This figure establishes the total size of the high-consequence issue, representing the complete number of all 'Severe Accident' instances recorded across the main road conditions (Dry and Wet).
 
-* **2. Most Severe Road Type (Highway):** This metric highlights the environment presenting the greatest likelihood of fatal or serious injury. Collisions on **Highways** are statistically the most prone to result in severe outcomes (1,139 cases), despite not recording the highest total number of incidents.
+* **2. Most Severe Road Type (Highway):** This metric highlights the environment presenting the greatest likelihood of fatal or serious injury. Collisions on Highways are statistically the most prone to result in severe outcomes (1,139 cases), despite not recording the highest total number of incidents.
 
 * **3. Road Condition Risk (Dry – 1,974):** This measure identifies the road condition most commonly associated with severe accidents. Despite the natural slipperiness of wet roads, dry surfaces record a significantly higher count of severe incidents (**1,974 cases**). This suggests riders' perceived safety leads to increased speeds and consequently, more severe collisions.
 
-* **4. Highest Risk Time (Afternoon):** This analysis pinpoints the time period with the greatest risk of accidents. The **Afternoon** records both the highest number of total accidents (2,451) and the highest number of severe accidents (**1,221**). This heightened risk likely stems from factors such as heavy traffic and fatigue.
+* **4. Highest Risk Time (Afternoon):** This analysis pinpoints the time period with the greatest risk of accidents. The Afternoon records both the highest number of total accidents (2,451) and the highest number of severe accidents (**1,221**). This heightened risk likely stems from factors such as heavy traffic and fatigue.
 """)
 
 
