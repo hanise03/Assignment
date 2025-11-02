@@ -4,6 +4,16 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+@st.cache_data # Cache the data load to speed up app performance
+def load_data(url):
+    """Loads the DataFrame from a URL and returns the entire DataFrame."""
+    try:
+        arts_df = pd.read_csv(url)
+        return arts_df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame() # Return empty DataFrame on failure
+        
 # URL for the CSV file
 url = 'https://raw.githubusercontent.com/hanise03/Assignment/refs/heads/main/student_df.csv'
 
