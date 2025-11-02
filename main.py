@@ -4,6 +4,31 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+st.header("Analysis of Factors Influencing Motorbike Accident Severity", divider="gray") # Changed header text
+
+st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
+
+# --- Dummy Data Creation ---
+# Replace this section with your actual data loading,
+# for example: df_encoded = pd.read_csv("your_data.csv")
+# We create this dummy data just so the app can run.
+@st.cache_data
+def load_data():
+    data = {
+        'Number_of_Vehicles': np.random.randint(1, 10, 200),
+        'Bike_Speed': np.random.randint(20, 100, 200),
+        'Accident_Severity': np.random.choice(['Low', 'Moderate', 'High'], 200),
+        'Traffic_Density': np.random.uniform(1.0, 10.0, 200),
+        'Biker_Age': np.random.randint(16, 70, 200)
+    }
+    return pd.DataFrame(data)
+
+df_encoded = load_data()
+# --- End of Dummy Data Section ---
+
+
+st.title("Biker Accident Analysis")
+
 import streamlit as st
 
 # Set page to wide layout to give the columns more space
@@ -51,30 +76,6 @@ with col4:
             value="> 5",
             help="Crowded roads (5+ vehicles) reduce reaction time and maneuvering space, compounding risk."
         )
-st.header("Analysis of Factors Influencing Motorbike Accident Severity", divider="gray") # Changed header text
-
-st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
-
-# --- Dummy Data Creation ---
-# Replace this section with your actual data loading,
-# for example: df_encoded = pd.read_csv("your_data.csv")
-# We create this dummy data just so the app can run.
-@st.cache_data
-def load_data():
-    data = {
-        'Number_of_Vehicles': np.random.randint(1, 10, 200),
-        'Bike_Speed': np.random.randint(20, 100, 200),
-        'Accident_Severity': np.random.choice(['Low', 'Moderate', 'High'], 200),
-        'Traffic_Density': np.random.uniform(1.0, 10.0, 200),
-        'Biker_Age': np.random.randint(16, 70, 200)
-    }
-    return pd.DataFrame(data)
-
-df_encoded = load_data()
-# --- End of Dummy Data Section ---
-
-
-st.title("Biker Accident Analysis")
 
 # --- Visualization 1: Bike Speed vs Number of Vehicles ---
 
