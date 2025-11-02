@@ -4,6 +4,8 @@ import plotly.express as px
 import numpy as np
 import seaborn as sns
 
+import streamlit as st
+
 # Set page to wide layout to give the columns more space
 st.set_page_config(layout="wide")
 
@@ -49,9 +51,6 @@ with col4:
             value="> 5",
             help="Crowded roads (5+ vehicles) reduce reaction time and maneuvering space, compounding risk."
         )
-    page_title="Analysis of Factors Influencing Motorbike Accident Severity"  # Changed page title
-)
-
 st.header("Analysis of Factors Influencing Motorbike Accident Severity", divider="gray") # Changed header text
 
 st.info("""to understand how bike speed, in combination with other variables (like traffic, vehicle count, and biker age), relates to or influences the severity of an accident.""")
