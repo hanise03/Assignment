@@ -159,7 +159,7 @@ with col1:
     with st.container(border=True):
         st.metric(
             label="Overall Severe Accidents",
-            value="3,044",
+            value="2,644",
             help="Total count of 'Severe Accident' cases across all conditions."
         )
 
