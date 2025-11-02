@@ -64,9 +64,22 @@ with col4:
             help="The average Bike Speed is consistent across all weather conditions (e.g., 79.41 in Clear, 78.06 in Rainy), indicating a lack of speed mitigation."
         )
 
+st.info("""
 
+* **1. Average Biker Age (22.5 Years):**
+    The mean rider age across the dataset is 22.5 years, highlighting a concentration of motorcyclists within the 15–30 age group. This demographic baseline frames all subsequent risk analyses.
+
+* **2. Helmet Non-Compliance (3,180 Riders):**
+    A critical safety insight shows that most riders (3,180) do not wear helmets, compared to (2,162) who do. This widespread non-compliance represents a major, unmitigated safety concern.
+
+* **3. Highest Usage Road Type (Village Road):**
+    Village Roads are the most frequently used environments, registering (2,181) total accidents. This indicates that they are the most common routes for this rider demographic and thus present the highest exposure risk.
+
+* **4. Speed Consistency (~79 Avg. Speed):**
+    Average bike speed remains high and consistent around 79 km/h across all weather types such as Clear, Foggy, and Rainy. This reveals a lack of adaptive behavior to changing conditions, suggesting many riders fail to reduce speed in hazardous weather, compounding the risk.
+""")
 # --- 3. Visualization: Biker Age Distribution by Helmet Use ---
-st.header("Biker Age Distribution by Helmet Use")
+
 
 fig1 = px.box(
     df_cleaned,
